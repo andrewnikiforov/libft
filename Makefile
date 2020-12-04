@@ -44,7 +44,8 @@ SRCS = 	ft_bzero.c\
 		ft_putnbr_fd.c\
 		ft_itoa.c\
 		ft_strmapi.c\
-		ft_split.c
+		ft_split.c\
+		get_next_line.c
 
 BONUSSRCS = 	ft_lstnew.c\
 				ft_lstdelone.c\
