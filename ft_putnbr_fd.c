@@ -6,7 +6,7 @@
 /*   By: omillan <omillan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 17:48:20 by omillan           #+#    #+#             */
-/*   Updated: 2020/11/09 21:12:56 by omillan          ###   ########.fr       */
+/*   Updated: 2021/04/15 13:11:37 by omillan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned int i;
+	unsigned int	i;
 
 	if (n < 0)
 	{

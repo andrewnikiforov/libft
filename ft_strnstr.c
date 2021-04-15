@@ -6,7 +6,7 @@
 /*   By: omillan <omillan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 17:25:55 by omillan           #+#    #+#             */
-/*   Updated: 2020/11/01 17:28:48 by omillan          ###   ########.fr       */
+/*   Updated: 2021/04/15 13:19:26 by omillan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
-	size_t i;
-	size_t j;
-	size_t k;
+	size_t	i;
+	size_t	j;
+	size_t	k;
 
 	i = -1;
 	if (!*to_find)

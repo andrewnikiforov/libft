@@ -6,13 +6,13 @@
 /*   By: omillan <omillan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/08 15:58:53 by omillan           #+#    #+#             */
-/*   Updated: 2020/11/09 16:27:00 by omillan          ###   ########.fr       */
+/*   Updated: 2021/04/15 13:15:37 by omillan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char			**clean(char **ar)
+static char	**clean(char **ar)
 {
 	size_t	i;
 
@@ -26,7 +26,7 @@ static char			**clean(char **ar)
 	return (NULL);
 }
 
-static size_t		count_word(char const *s, char c)
+static size_t	count_word(char const *s, char c)
 {
 	size_t	count;
 	char	*str;
@@ -50,7 +50,7 @@ static size_t		count_word(char const *s, char c)
 	return (count);
 }
 
-static size_t		word_len(char const *s, char c)
+static size_t	word_len(char const *s, char c)
 {
 	size_t	count;
 	char	*str;
@@ -65,9 +65,9 @@ static size_t		word_len(char const *s, char c)
 	return (count);
 }
 
-static char			*trim_str(char *s, char c)
+static char	*trim_str(char *s, char c)
 {
-	char *str;
+	char	*str;
 
 	str = s;
 	while (*str == c && *str)
@@ -75,7 +75,7 @@ static char			*trim_str(char *s, char c)
 	return (str);
 }
 
-char				**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	*str;
 	size_t	words;
@@ -84,16 +84,16 @@ char				**ft_split(char const *s, char c)
 	size_t	j;
 
 	i = -1;
-	if (!s)
-		return (NULL);
 	str = (char *)s;
 	words = count_word(str, c);
-	if (!(arr = malloc(sizeof(char *) * (words + 1))))
+	arr = malloc(sizeof(char *) * (words + 1));
+	if (!arr)
 		return (NULL);
 	while (++i < words)
 	{
 		str = trim_str(str, c);
-		if (!(arr[i] = malloc(sizeof(char) * (word_len(str, c) + 1))))
+		arr[i] = malloc(sizeof(char) * (word_len(str, c) + 1));
+		if (!arr[i])
 			clean(arr);
 		j = 0;
 		while (*str != c && *str != '\0')

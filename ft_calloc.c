@@ -6,7 +6,7 @@
 /*   By: omillan <omillan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 12:43:43 by omillan           #+#    #+#             */
-/*   Updated: 2020/11/08 10:53:14 by omillan          ###   ########.fr       */
+/*   Updated: 2021/04/14 15:48:55 by omillan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void *ar;
+	void	*ar;
 
-	if (!(ar = (void *)malloc(count * size)))
+	ar = (void *)malloc(count * size);
+	if (!ar)
 		return (NULL);
 	ft_bzero(ar, count * size);
 	return (ar);

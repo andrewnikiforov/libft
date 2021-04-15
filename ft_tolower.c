@@ -6,13 +6,13 @@
 /*   By: omillan <omillan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 12:29:44 by omillan           #+#    #+#             */
-/*   Updated: 2020/11/01 17:33:00 by omillan          ###   ########.fr       */
+/*   Updated: 2021/04/15 13:22:07 by omillan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c > 64 && c < 91)
 		return (c + 32);

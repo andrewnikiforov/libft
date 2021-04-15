@@ -6,7 +6,7 @@
 /*   By: omillan <omillan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 11:43:14 by omillan           #+#    #+#             */
-/*   Updated: 2020/11/26 16:21:48 by omillan          ###   ########.fr       */
+/*   Updated: 2021/04/14 15:46:50 by omillan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 #include "libft.h"
 
-static int		help(int res1, int sign1, int k1)
+static int	help(int res1, int sign1, int k1)
 {
 	if (k1 >= 19)
 	{
@@ -26,10 +26,10 @@ static int		help(int res1, int sign1, int k1)
 	return (res1);
 }
 
-int				skip_zero(const char *s, int *i)
+int	skip_zero(const char *s, int *i)
 {
-	int k;
-	int j;
+	int	k;
+	int	j;
 
 	j = *i;
 	k = 0;
@@ -41,7 +41,7 @@ int				skip_zero(const char *s, int *i)
 	return (j);
 }
 
-int				ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	int		i;
 	int		rez;

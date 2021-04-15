@@ -6,7 +6,7 @@
 /*   By: omillan <omillan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 16:42:50 by omillan           #+#    #+#             */
-/*   Updated: 2020/11/07 16:45:36 by omillan          ###   ########.fr       */
+/*   Updated: 2021/04/15 13:07:02 by omillan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list *tmp;
+	t_list	*tmp;
 
 	if (!f)
 		return ;

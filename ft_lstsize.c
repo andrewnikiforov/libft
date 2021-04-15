@@ -6,13 +6,13 @@
 /*   By: omillan <omillan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 16:43:19 by omillan           #+#    #+#             */
-/*   Updated: 2020/11/07 16:43:21 by omillan          ###   ########.fr       */
+/*   Updated: 2021/04/15 13:09:03 by omillan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	int		size;
 	t_list	*tmp;

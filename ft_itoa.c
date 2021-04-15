@@ -6,34 +6,37 @@
 /*   By: omillan <omillan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 11:46:23 by omillan           #+#    #+#             */
-/*   Updated: 2020/11/09 18:13:49 by omillan          ###   ########.fr       */
+/*   Updated: 2021/04/15 13:05:13 by omillan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		size_n(int a)
+static int	size_n(int a)
 {
-	int		size;
-	int		b;
+	int	size;
+	int	b;
 
 	b = a;
-	size = 1;
+	size = 0;
 	if (a < 0)
 		size++;
-	while ((b /= 10) != 0)
+	while (b != 0)
+	{
 		size++;
+		b /= 10;
+	}
 	return (size);
 }
 
-static int		sign_n(int a)
+static int	sign_n(int a)
 {
 	if (a < 0)
 		return (-1);
 	return (1);
 }
 
-char			*ft_itoa(int a)
+char	*ft_itoa(int a)
 {
 	int		size;
 	int		sign;
@@ -44,7 +47,8 @@ char			*ft_itoa(int a)
 	j = 0;
 	size = size_n(a);
 	sign = sign_n(a);
-	if (!(str = (char *)malloc(sizeof(char) * (size + 1))))
+	str = (char *)malloc(sizeof(char) * (size + 1));
+	if (!str)
 		return (NULL);
 	str[size] = '\0';
 	if (a < 0)

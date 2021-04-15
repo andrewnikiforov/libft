@@ -6,7 +6,7 @@
 /*   By: omillan <omillan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 17:56:17 by omillan           #+#    #+#             */
-/*   Updated: 2020/11/09 11:54:40 by omillan          ###   ########.fr       */
+/*   Updated: 2021/04/14 15:41:08 by omillan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-typedef struct		s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
@@ -34,8 +34,8 @@ size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
 char				*strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strchr(const char *s, int c);
-char				*ft_strnstr(const char *str, const char *to_find,
-					size_t len);
+char				*ft_strnstr(const char *str, const char *to_find, \
+																size_t len);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
@@ -65,9 +65,9 @@ void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstdelone(t_list *lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstlast(t_list *lst);
-t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
-					void (*del)(void *));
+t_list				*ft_lstmap(t_list *lst, void *(*f)(void *), \
+														void (*del)(void *));
 int					ft_lstsize(t_list *lst);
-int				get_next_line(int fd, char **line);
+int					get_next_line(int fd, char **line);
 
 #endif

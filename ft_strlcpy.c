@@ -6,15 +6,15 @@
 /*   By: omillan <omillan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/29 17:03:52 by omillan           #+#    #+#             */
-/*   Updated: 2020/11/09 11:37:52 by omillan          ###   ########.fr       */
+/*   Updated: 2021/04/15 13:17:17 by omillan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t		i;
+	size_t	i;
 
 	i = 0;
 	if (!dst || !src)
