@@ -6,7 +6,7 @@
 /*   By: omillan <omillan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 17:56:17 by omillan           #+#    #+#             */
-/*   Updated: 2021/04/14 15:41:08 by omillan          ###   ########.fr       */
+/*   Updated: 2021/04/29 17:02:16 by omillan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ typedef struct s_list
 }					t_list;
 
 void				*ft_memset(void *b, int c, size_t len);
-void                *ft_malloc_ptr(void **ptr, int size);
+void				*ft_malloc_ptr(void **ptr, int size);
 void				ft_bzero(void *s, size_t n);
 void				*ft_memcpy(void *dst, const void *src, size_t n);
 void				*ft_memccpy(void *dst, const void *src, int c, size_t n);

@@ -6,14 +6,14 @@
 /*   By: omillan <omillan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 11:43:14 by omillan           #+#    #+#             */
-/*   Updated: 2021/04/14 15:46:50 by omillan          ###   ########.fr       */
+/*   Updated: 2021/04/29 17:01:48 by omillan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_malloc_ptr(void **ptr, int size)
+void	*ft_malloc_ptr(void **ptr, int size)
 {
-    *ptr = malloc(size);
-    return (*ptr);
+	*ptr = malloc(size);
+	return (*ptr);
 }
