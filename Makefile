@@ -6,16 +6,16 @@
 #    By: omillan <omillan@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/29 18:56:33 by omillan           #+#    #+#              #
-#    Updated: 2020/11/10 15:15:11 by omillan          ###   ########.fr        #
+#    Updated: 2021/04/29 16:49:37 by omillan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 SRCS = 	ft_bzero.c\
 		ft_memccpy.c\
-	 	ft_memchr.c\
-	  	ft_memcmp.c\
-	   	ft_memcpy.c\
+		ft_memchr.c\
+		ft_memcmp.c\
+		ft_memcpy.c\
 		ft_memset.c\
 		ft_strlcpy.c\
 		ft_strlen.c\
@@ -45,42 +45,36 @@ SRCS = 	ft_bzero.c\
 		ft_itoa.c\
 		ft_strmapi.c\
 		ft_split.c\
-        ft_malloc_ptr.c\
-		get_next_line.c
+		ft_malloc_ptr.c\
+		get_next_line.c\
+		ft_lstnew.c\
+		ft_lstdelone.c\
+		ft_lstadd_back.c\
+		ft_lstlast.c\
+		ft_lstadd_front.c\
+		ft_lstclear.c\
+		ft_lstmap.c\
+		ft_lstiter.c\
+		ft_lstsize.c\
 
-BONUSSRCS = 	ft_lstnew.c\
-				ft_lstdelone.c\
-				ft_lstadd_back.c\
-				ft_lstlast.c\
-				ft_lstadd_front.c\
-				ft_lstclear.c\
-				ft_lstmap.c\
-				ft_lstiter.c\
-				ft_lstsize.c\
-
-
-HEADER 	= libft.h  
-OBJS 	= ${SRCS:.c=.o}
-BONUSOBJS = ${BONUSSRCS:.c=.o}
+HEADER	= libft.h
+OBJS	= ${SRCS:.c=.o}
 CC		= gcc
-FLAGS 	= -Wall -Wextra -Werror -I ${HEADER}
-AR 		= ar rc
-RM 		= rm -f
+FLAGS	= -Wall -Wextra -Werror -I ${HEADER}
+AR		= ar rc
+RM		= rm -f
 
 all:		${NAME}
 
-$(NAME): 	${OBJS}
-		 	${AR} ${NAME} ${OBJS}
+$(NAME):	${OBJS}
+			${AR} ${NAME} ${OBJS}
 
-bonus: 		${BONUSOBJS}
-			${AR} ${NAME} ${BONUSOBJS}
+clean:
+			${RM} ${OBJS}
 
-clean: 
-			${RM} ${OBJS} ${BONUSOBJS}
-
-fclean: 	clean
+fclean:		clean
 			${RM} ${NAME}
 
 re:			fclean all
 
-.PHONY: 	all clean fclean re bonus
+.PHONY:		all clean fclean re bonus
